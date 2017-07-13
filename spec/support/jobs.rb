@@ -4,7 +4,7 @@ FactoryGirl.define do
     description "Mostly getting coffee"
     level_of_interest "99"
     city "Fargo"
-    associations :company
+    company
   end
 
   factory :company do
