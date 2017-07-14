@@ -7,7 +7,7 @@ describe "User sees all categories" do
 
     visit categories_path
 
-    expect(page).to have_content "Sanitations"
-    expect(page).to have_content "Education"
+    expect(page).to have_content category.title
+    expect(page).to have_content category_two.title
   end
 end
