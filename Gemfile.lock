@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/thoughtbot/shoulda-matchers.git
+  revision: 1201198f959809d7a82b51b66e878fb1d9b856e3
+  specs:
+    shoulda-matchers (3.1.2)
+      activesupport (>= 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -163,8 +170,6 @@ GEM
     selenium-webdriver (3.4.3)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
-    shoulda-matchers (3.1.1)
-      activesupport (>= 4.0.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -217,7 +222,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
-  shoulda-matchers
+  shoulda-matchers!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

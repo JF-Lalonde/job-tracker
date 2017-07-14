@@ -41,7 +41,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'launchy'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'rails-controller-testing'

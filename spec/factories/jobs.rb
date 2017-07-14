@@ -6,10 +6,4 @@ FactoryGirl.define do
     city "Fargo"
     company
   end
-
-  factory :company do
-    sequence :name do |n|
-      "#{n} Goodwill"
-    end
-  end
 end
