@@ -1,5 +1,5 @@
 class AddCategoryIdToJobs < ActiveRecord::Migration[5.1]
   def change
-    add_column :jobs, :category_id, :integer
+    add_reference :jobs, :category, foreign_key: true
   end
 end

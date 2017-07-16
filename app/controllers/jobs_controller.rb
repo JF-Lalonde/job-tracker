@@ -6,7 +6,7 @@ class JobsController < ApplicationController
   end
 
   def new
-    @job = Job.new()
+    @job = Job.new
   end
 
   def create
@@ -43,13 +43,13 @@ class JobsController < ApplicationController
     job.destroy
 
     flash[:success] = "#{job.title} was successfully deleted!"
-    redirect_to company_jobs_path
+    redirect_to company_jobs_path(@company)
   end
 
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :level_of_interest, :city)
+    params.require(:job).permit(:title, :description, :level_of_interest, :city, :category_id)
   end
 
   def set_jobs
