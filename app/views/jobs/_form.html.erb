@@ -1,5 +1,5 @@
 <div class="job_form">
-  <%= form_for [:company, @job] do |f| %>
+  <%= form_for [@company, @job] do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %></br>
 
@@ -12,8 +12,9 @@
     <%= f.label :city %>
     <%= f.text_field :city %></br>
 
-    <%= f.label :category %> # Or :category_id?
-    <%= f.collection_select(:category_id, Category.all, :id, :title, {prompt: "Select Category"}, {include_blank: true})%></br> #Instead of Category.all, Category.order(:title)?
+    <%= f.label :category %>
+    <%= f.collection_select(:category_id, Category.all, :id, :title, {prompt: "Select Category"}, {include_blank: true})%></br>
+    <!-- Instead of Category.all, Category.order(:title)? -->
 
     <%= f.submit %>
   <% end %>

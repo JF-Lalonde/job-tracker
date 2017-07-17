@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe "User edits an existing job" do
   scenario "a user can edit a job" do
-    pending
-    job = create(:job)
+    company = Company.create!(name: "P&G")
+    job = Job.create!(title: "Custodian", city: "Oslo", level_of_interest: 51, company_id: company.id)
 
     visit company_jobs_path(job.company.id)
 

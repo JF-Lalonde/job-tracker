@@ -1,14 +1,17 @@
-Title: <%= @job.title %>
-<br>
+<h5><%= link_to "Back to #{@job.company.name}", company_path(@job.company) %></h5>
 
-Description: <%= @job.description %>
-<br>
+<h2>Title: <%= @job.title %></h2>
 
-Level of Interest: <%= @job.level_of_interest %>
-<br>
 
-City: <%= @job.city %>
-<br>
+<h3>Description: <%= @job.description %></h3>
 
-Company: <%= link_to @job.company.name, company_path(@job.company) %>
+
+<h3>Level of Interest: <%= @job.level_of_interest %></h3>
+
+<h3>City: <%= @job.city %></h3>
+
+<h3>Category: <%= @job.category.nil? ? "Not Assigned" : (link_to @job.category.title, category_path(@job.category)) %></h3>
+
+<h3>Company: <%= link_to @job.company.name, company_path(@job.company) %></h3>
+
 <h3><%= link_to "Edit Job", edit_company_job_path(@job.company, @job) %></h3>

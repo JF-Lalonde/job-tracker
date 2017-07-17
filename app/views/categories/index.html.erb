@@ -1,5 +1,7 @@
 <h3>All Categories</h3>
 
+<h5><%= link_to "Create new category", new_category_path %></h5>
+
 <ul>
   <% @categories.each do |category| %>
     <li class=category_<%= category.id %>>
