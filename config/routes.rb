@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root to: "companies#index"
   resources :companies do
     resources :jobs do
       resources :comments
@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   end
 
   resources :jobs do
-    resources :comments
+    resources :comments, only: :create
   end
 
   resources :categories
+
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  get "/logout", to: "sessions#destroy"
 end

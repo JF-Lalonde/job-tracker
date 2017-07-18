@@ -1,6 +1,6 @@
 <h3>Enter Comment</h3>
 
-<%= form_for [@company, @job, @comment] do |f|%>
+<%= form_for [@job, @comment] do |f|%>
 <ul>
   <%= f.label :content %>
   <%= f.text_area :content %></br>
